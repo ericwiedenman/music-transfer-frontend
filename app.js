@@ -1,7 +1,7 @@
 // ========= CONFIG =========
 // When you deploy the backend, set this to your API origin.
 // Example: 'https://api.playlisttransfer.com' or your Render/Railway URL.
-const BACKEND_BASE_URL = 'https://YOUR-BACKEND-ORIGIN'; // <- set me
+const BACKEND_BASE_URL = 'https://music-transfer-backend.onrender.com'; // <- set me
 // ==========================
 
 const qs = (sel) => document.querySelector(sel);
