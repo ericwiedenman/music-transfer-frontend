@@ -1,7 +1,58 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=./" />
-  </head>
-  <body></body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Playlist Transfer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Playlist Transfer</h1>
+      <p class="sub">Move your Spotify playlists to TIDAL on your phone.</p>
+    </header>
+
+    <section class="card">
+      <h2>1) Connect accounts</h2>
+      <div class="row">
+        <button id="btnSpotify" class="btn">Connect Spotify</button>
+        <button id="btnTidal" class="btn">Connect TIDAL</button>
+      </div>
+      <p id="connHint" class="hint">
+        After each sign-in, you’ll be redirected back here.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>2) Choose what to transfer</h2>
+      <label class="chk">
+        <input type="checkbox" id="includeLiked" checked />
+        Include Liked Songs (if supported)
+      </label>
+      <label class="chk">
+        <input type="checkbox" id="selectAll" checked />
+        Transfer all playlists
+      </label>
+      <p class="hint">Advanced playlist selection can come later. This demo sends simple options.</p>
+    </section>
+
+    <section class="card">
+      <h2>3) Start</h2>
+      <button id="btnStart" class="btn primary">Start Transfer</button>
+      <div id="status" class="status"></div>
+      <progress id="progress" max="100" value="0" class="hidden"></progress>
+      <pre id="log" class="log"></pre>
+    </section>
+
+    <footer>
+      <p>
+        This tool uses official OAuth sign-in on each service. We never ask for your passwords.
+      </p>
+      <p class="tiny"><a href="#" id="privacy">Privacy & Terms (placeholder)</a></p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
 </html>
