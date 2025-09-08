@@ -9,9 +9,13 @@ const statusEl = qs('#status');
 const logEl = qs('#log');
 const progressEl = qs('#progress');
 
-const path = location.pathname;
-if (path.includes('/connected/spotify')) setStatus('Spotify connected ✅');
-if (path.includes('/connected/tidal'))   setStatus('TIDAL connected ✅');
+const p = location.pathname;
+if (p.endsWith('/connected/spotify') || p.includes('/connected/spotify')) {
+  setStatus('Spotify connected ✅');
+}
+if (p.endsWith('/connected/tidal') || p.includes('/connected/tidal')) {
+  setStatus('TIDAL connected ✅');
+}
 
 function log(msg) {
   const ts = new Date().toLocaleTimeString();
